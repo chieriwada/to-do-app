@@ -1,16 +1,21 @@
 function onReady() {
-  const addToDoForm = document.getElementById('addToDoForm');
-  const newToDoText = document.getElementById('newToDoText');
-  const toDoList = document.getElementById('toDoList');
+  const ADD_TODO_FORM = document.getElementById('addToDoForm');
+  const NEW_TODO_TEXT = document.getElementById('newToDoText');
+  const TODO_LIST = document.getElementById('toDoList');
 
-  addToDoForm.addEventListener('submit', () => {
+  ADD_TODO_FORM.addEventListener('submit', (event) => {
     event.preventDefault();
-
-    //get the text
-    let title = newToDoText.value;
 
     //create new li
     let newLi = document.createElement('li');
+
+    //create title element
+    let newLiTitle = document.createElement('text');
+
+    //style newLiTitle
+    newLiTitle.style.fontFamily = "Roboto","Helvetica","Arial","sans-serif";
+    newLiTitle.style.fontSize = "1em";
+    newLiTitle.style.padding = "0 1rem 0 1.5rem";
 
     //create new input
     let checkbox = document.createElement('input');
@@ -18,17 +23,40 @@ function onReady() {
     //set the input's type to checkbox
     checkbox.type = "checkbox";
 
-    //set the title
-    newLi.textContext = title;
+    //get the text
+    let title = NEW_TODO_TEXT.value;
+
+    //create delete button
+    let deleteBtn = document.createElement('button');
+
+    //style deleteBtn
+    deleteBtn.innerHTML = '<img src="delete-icon.svg" />';
+    deleteBtn.style.border = "none";
+    deleteBtn.style.colorFill = "blue";
+    deleteBtn.style.cssFloat = "right";
+
+    //delete button action
+    deleteBtn.addEventListener('click', function(event) {
+      TODO_LIST.removeChild(this.parentElement);
+    });
 
     //attach the checkbox to the li
     newLi.appendChild(checkbox);
 
+    //set the title
+    newLiTitle.textContent = title;
+
+    //add title text
+    newLi.appendChild(newLiTitle);
+
+    //show delete button
+    newLi.appendChild(deleteBtn);
+
     //attach the li to the ul
-    toDoList.appendChild(newLi);
+    TODO_LIST.appendChild(newLi);
 
     //empty the input
-    newToDoText.value = '';
+    NEW_TODO_TEXT.value = "";
 
   });
 }

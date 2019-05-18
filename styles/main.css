@@ -1,0 +1,47 @@
+body {
+  background-color: #e3f2fd;
+}
+
+.mdl-card {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 30%;
+  height: 70%;
+  min-width: 300px;
+  min-height: 400px;
+}
+
+.mdl-card__title {
+  background: url("waterfall-hero.jpg") 100% 85% / cover;
+  text-align: left;
+  height: 160px;
+  min-height: 160px;
+}
+
+.mdl-card__title-text {
+  color: hsla(210, 100%, 99%, 0.9);
+  font-weight: light;
+  font-size: 1.2em;
+}
+
+#addToDoForm {
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.18);
+}
+
+.mdl-button {
+  margin-left: 1rem;
+}
+
+#toDoList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+#toDoList > li {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
