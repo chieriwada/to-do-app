@@ -1,5 +1,7 @@
-# Simple To-Do
+# To-Do App
+Coded simple to-do app from scratch using JavaScript. Designed with Google's [Material Design Guideline](https://material.io/).
 
-Checkpoint 5 - Simple To-Do: DOM Scripting - Events, Part 1
+![To-do app screenshot](https://raw.githubusercontent.com/chieriwada/to-do-app/master/Screenshot.png)
 
-Checkpoint 6 - Simple To-Do: DOM Scripting - Events, Part 2
+# About Bloc
+[Bloc](https://bloc.io) is a UX design bootcamp and apprenticeship where students can deepen their understanding of the UX design process. During my time with Bloc, I studied the entire UX cycle - from ideation, research, visual design to frontend development - while being mentored by a senior industry professional.
